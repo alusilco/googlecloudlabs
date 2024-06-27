@@ -57,5 +57,4 @@ Este laboratorio proporcionó una valiosa experiencia práctica en la navegació
 
 ---
 
-Este informe resume las actividades clave y los conocimientos adquiridos en el laboratorio sobre la creación de máquinas virtuales, destacando el proceso y los resultados de cada tarea en Google Cloud Platform en la ruta: [Cloud Engineer Learning Path](https://www.cloudskillsboost.google/paths/11)
-. 
+Este informe resume las actividades clave y los conocimientos adquiridos en laboratorios destacando el proceso y los resultados de cada tarea en Google Cloud Platform en la ruta: [Cloud Engineer Learning Path](https://www.cloudskillsboost.google/paths/11)
