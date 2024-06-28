@@ -1,4 +1,6 @@
-# Reporte de Laboratorio: Implementación de Private Google Access y Cloud NAT en Google Cloud
+# Reporte de Laboratorio
+
+## Implementación de Private Google Access y Cloud NAT en Google Cloud
 
 ## Introducción
 

@@ -1,5 +1,7 @@
 # Informe de Laboratorio: 
+
 [Trabajando con Máquinas Virtuales](https://www.cloudskillsboost.google/paths/499/course_templates/50/labs/485541)
+
 
 ## Introducción
 
