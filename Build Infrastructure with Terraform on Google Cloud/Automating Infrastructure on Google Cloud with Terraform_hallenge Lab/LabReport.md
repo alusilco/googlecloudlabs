@@ -1,5 +1,4 @@
-Configuración inicial: Crear archivos de configuración
-Crea los archivos y directorios vacíos en Cloud Shell o en el editor de Cloud Shell.
+# Automating Infrastructure on Google Cloud with Terraform: Challenge 
 
 ## Configuración inicial: Crear archivos de configuración
 
@@ -68,12 +67,10 @@ terraform init
 ```
 
 
-Para importar recursos existentes, como las instancias de Compute Engine, sigue los siguientes pasos:
-
-Accede a Compute Engine > Instancias de VM en la consola de GCP.
-Copia el ID de las instancias tf-instance-1 y tf-instance-2.
-Navega al archivo modules/instances/instances.tf y copia la configuración proporcionada.
-Usa el siguiente comando para importar la primera instancia
+## TAREA 1: Importar infraestructura
+Ve a Compute Engine > Instancias de VM. Haz clic en tf-instancia-1. Copia el ID de la instancia en algún lugar para usarlo más tarde.
+Ve a Compute Engine > Instancias de VM. Haz clic en tf-instancia-2. Copia el ID de la instancia en algún lugar para usarlo más tarde.
+A continuación, ve a modules/instances/instances.tf. Copia la siguiente configuración en el archivo:
 ```sh
 resource "google_compute_instance" "tf-instance-1" {
   name         = "tf-instance-1"
@@ -123,7 +120,7 @@ Para importar la primera instancia, usa el siguiente comando:
 terraform import module.instances.google_compute_instance.tf-instance-1 <ID_DE_INSTANCIA_1>
 ```
 
-TAREA 2: Configurar un backend remoto
+## TAREA 2: Configurar un backend remoto
 Agrega el siguiente código al archivo modules/storage/storage.tf y completa con el nombre del bucket:
 ```sh
 resource "google_storage_bucket" "storage-bucket" {
@@ -164,7 +161,7 @@ terraform {
 terraform init
 ```
 
-TAREA 3: Modificar y actualizar la infraestructura
+## TAREA 3: Modificar y actualizar la infraestructura
 Accede a modules/instances/instances.tf. Reemplaza todo el contenido con lo siguiente, completando con el ID de tu Instancia 3:
 ```sh
 resource "google_compute_instance" "tf-instance-1" {
@@ -225,7 +222,7 @@ terraform init
 terraform apply
 ```
 
-TAREA 4: Marcar y eliminar recursos
+## TAREA 4: Marcar y eliminar recursos
 Marca el recurso tf-instance-3 con el siguiente comando, completando con el ID de tu Instancia 3:
 ```sh
 terraform taint module.instances.google_compute_instance.<COMPLETA CON EL NOMBRE DE INSTANCIA 3>
@@ -258,7 +255,7 @@ resource "google_compute_instance" "<COMPLETA CON EL NOMBRE DE INSTANCIA 3>" {
 terraform apply
 ```
 
-TAREA 5: Usar un módulo del Registro
+## TAREA 5: Usar un módulo del Registro
 Copia y pega lo siguiente al final del archivo main.tf, completando con el Número de Versión y el Nombre de Red indicados en el desafío:
 
 
@@ -296,7 +293,7 @@ terraform init
 terraform apply
 ```
 
-TAREA 6: Configurar un firewall
+## TAREA 6: Configurar un firewall
 Agrega el siguiente recurso al archivo main.tf, completando con el ID de Proyecto de GCP y el Nombre de Red:
 ```sh
 resource "google_compute_firewall" "tf-firewall" {
@@ -312,3 +309,7 @@ resource "google_compute_firewall" "tf-firewall" {
   source_ranges = ["0.0.0.0/0"]
 }
 ```
+
+
+---
+Este informe resume las actividades clave y los conocimientos adquiridos en laboratorios destacando el proceso y los resultados de cada tarea en Google Cloud Platform en la ruta: [Cloud Engineer Learning Path](https://www.cloudskillsboost.google/paths/11)
